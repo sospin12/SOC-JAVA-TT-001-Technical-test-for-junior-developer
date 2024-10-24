@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class App {
 
-    // INVERTIR UNA CADENA
+    // REVERSE A STRING
     private void e1InvertirString(String str) {
 
         /*
@@ -30,15 +30,15 @@ public class App {
 
     // CAPICUA NUMBER
     private void e2IsCapicua(int number) {
-        String numberText = String.valueOf(number);
-        String reverseNumber = new StringBuilder(numberText).reverse().toString();
-
+        // String numberText = String.valueOf(number);
+        String reverseNumber = new StringBuilder(String.valueOf(number)).reverse().toString();
+        /* previus code
         if (numberText.equals(reverseNumber)) {
             System.out.println("Is capicua");
         } else {
             System.out.println("Not capicua");
-        }
-
+        }*/
+        System.out.println(String.valueOf(number).equals(reverseNumber)? "Is capicua":"Not capicua");
     }
 
     // murcielago-------COUNT CHARACTERS
@@ -48,7 +48,7 @@ public class App {
 
         length = text.length();
 
-        for (i = 0; i < length; i++) {
+        for (i = 0; i < length; i++) {// store de word every time it apears
             counter[text.charAt(i)]++;
         }
 
@@ -143,13 +143,13 @@ public class App {
         App app = new App();
         // app.e1InvertirString("santiago");
         // app.e2IsCapicua(456);
-        // app.e3CountCharacterTimes("muercielago");
+        app.e3CountCharacterTimes("muercielago");
         // app.e4Repetidos("murcielagmuerlago");
         // app.e5MultipeOf(10, 2);
         // System.out.println((app.e6LeapYear(2025))? "Is leap year":"Not leap year");
         // app.e7RandomOrderString("santiago");
         // app.e8NotDuplicateList(Arrays.asList(1,2,3,4,5,5,6,6,7,7));
         // app.e9CheckIfVouelIsPresent("sntg");
-        app.e10Palindromo("oro");
+        // app.e10Palindromo("oro");
     }
 }
