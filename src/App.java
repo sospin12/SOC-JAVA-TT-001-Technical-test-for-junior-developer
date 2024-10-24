@@ -41,7 +41,7 @@ public class App {
 
     }
 
-    // murcielago-------CONTAR CARACTERES
+    // murcielago-------COUNT CHARACTERS
     // m=1, u=1, r=1, c=1, i=1, e=1, l=1, a=1, g=1, o=1
     private void e3CountCharacterTimes(String text) {
         int i, length, counter[] = new int[256];
@@ -59,7 +59,7 @@ public class App {
         }
     }
 
-    // solo improme los caracteres repetido, que hayan mas de uno
+    // ONLY PRINTS REPEATED CHARACTERS
     private void e4Repetidos(String text) {
         int i, length, counter[] = new int[256];
 
@@ -76,7 +76,7 @@ public class App {
         }
     }
 
-    // esmultipo de un numero
+    // IS MULPLE FOR A NUMBER
     public void e5MultipeOf(int num, int n) {
         if (num % n == 0) {
             System.out.println("Es multiplo.");
@@ -85,12 +85,12 @@ public class App {
         }
     }
 
-    // si es biciesto o no
+    // IS LEAP YEAR
     public boolean e6LeapYear(int year) {
         return LocalDate.of(year, 1, 1).isLeapYear();
     }
 
-    // desordenar una cadena de texto
+    // RANDOMICE STRING
     public void e7RandomOrderString(String text) {
         String[] array = text.split("");
         List<String> list = Arrays.asList(array);
@@ -98,11 +98,13 @@ public class App {
         list.forEach(System.out::print);
     }
 
+    // DO NOT STORE THE DUPLCIATED NUMBERS
     public void e8NotDuplicateList(List<Integer> list) {
         Set<Integer> set = new HashSet<>(list);
         set.forEach(System.out::print);
     }
 
+    //CHECK IF VOWEL IS PRESENT
     public void e9CheckIfVouelIsPresent(String text) {
         /*
          * String[] array = text.split("");
@@ -124,6 +126,7 @@ public class App {
         System.out.println(result);
     }
 
+    //PLAINDROMO
     private void e10Palindromo(String text){
         boolean result  = true;
         int length = text.length();
@@ -136,7 +139,7 @@ public class App {
         System.out.println(result);
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {//MAIN
         App app = new App();
         // app.e1InvertirString("santiago");
         // app.e2IsCapicua(456);
